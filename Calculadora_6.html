@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <link rel="stylesheet" href="./style/estilos.css">
+</head>
+<body>
+    <div id="container">
+        <div id="title">
+            <b>calculadora</b>
+        </div>
+        <div class="input-group">
+            <label for="num1">Numero 1:</label>
+            <input id="num1" type="number" placeholder="inserta un numero">
+        </div>
+        <div class="input-group">
+            <label for="num2">Numero 2:</label>
+            <input id="num2" type="number" placeholder="incerta un numero.">
+        </div>
+        <div class="btn-group">
+            <button onclick="divisionDosNumeros()">Division</button>
+            <button onclick="restaDosNumeros()">resta</button>
+            <button onclick="multiplicacionDosNumeros()">multiplicacion</button>
+            <button onclick="sumaDosNumeros()">suma</button>
+
+        </div>
+        <div id="result">
+            <input disabled id="resultadoInput" type="text">
+        </div>
+    </div>
+
+    <script>
+        let numberOne = document.getElementById("num1");
+        let numberTwo = document.getElementById("num2");
+        let resultado = document.getElementById("resultadoInput");
+
+        function divisionDosNumeros() {
+            let numOne = parseInt(numberOne.value);
+            let numTwo = parseInt(numberTwo.value);
+            let division = (numOne) / (numTwo);
+            resultado.value = division;
+        }
+
+        function restaDosNumeros() {
+            let numOne = parseInt(numberOne.value);
+            let numTwo = parseInt(numberTwo.value);
+            let resta = numOne - numTwo;
+            resultado.value = resta;
+        }
+
+        function multiplicacionDosNumeros() {
+            let numOne = parseInt(numberOne.value);
+            let numTwo = parseInt(numberTwo.value);
+            let multiplicacion = numOne * numTwo;
+            resultado.value = multiplicacion;
+        }
+
+        function sumaDosNumeros() {
+            let numOne = parseInt(numberOne.value);
+            let numTwo = parseInt(numberTwo.value);
+            let suma = numOne + numTwo;
+            resultado.value = suma;
+        }
+
+       
+       
+        
+        
+    </script>
+</body>
+</html>
